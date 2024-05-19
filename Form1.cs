@@ -32,7 +32,7 @@ namespace NotHesaplayıcı
                 {
                     vize = float.Parse(textBox1.Text);
                     final = float.Parse(textBox2.Text);
-                    result = vize * 30 / 100 + final * 60 / 100;
+                    result = vize * 30 / 100 + final * 70 / 100;
                     label4.Text = result.ToString();
                     if (result < 60)
                     {
@@ -98,8 +98,8 @@ namespace NotHesaplayıcı
             {
                 try
                 {
-                    gereken_not = (100*(60- (30 * int.Parse(textBox5.Text)/100))) / 60; 
-                    yeni_toplam = ((int.Parse(textBox5.Text) * 30 / 100) + gereken_not * 60 / 100);
+                    gereken_not = (100*(60- (30 * int.Parse(textBox5.Text)/100))) / 70; 
+                    yeni_toplam = ((int.Parse(textBox5.Text) * 30 / 100) + gereken_not * 70 / 100);
                     standart_hata = 60 - yeni_toplam;
                     gereken_not = standart_hata > 0 ? gereken_not + standart_hata : gereken_not;
                     label10.Text = string.Format("{0} dersinden geçmek için final sınavından {1} almalısınız!", textBox4.Text, gereken_not.ToString());
